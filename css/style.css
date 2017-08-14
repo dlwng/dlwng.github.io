@@ -322,9 +322,13 @@ nav {
       text-decoration: none;
       color: #4D51A2; }
     nav li:hover {
-      border-bottom: 3px solid #4D51A2;
-      border-color: #4D51A2;
-      text-decoration: none; }
+      /*border-bottom: 3px solid $logo-purple ;*/
+      /*border-color: $logo-purple;*/
+      text-decoration: none;
+      color: #4D51A2; }
+      nav li:hover .highlight {
+        color: #4D51A2;
+        background-size: 200% 50%; }
 
 nav.main-menu {
   position: fixed;
@@ -352,10 +356,16 @@ p {
 
 a {
   color: #4D51A2;
-  text-decoration: none; }
+  text-decoration: none;
+  background-image: linear-gradient(to right, transparent 50%, #EAD8B7 50%);
+  background-origin: 0;
+  background-size: 0% 52%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%; }
   a:hover {
     color: #AEB5BD;
-    cursor: pointer; }
+    cursor: pointer;
+    background-size: 200% 52%; }
 
 .section-title {
   padding-bottom: 30px;
@@ -384,6 +394,13 @@ button {
 
 .bold {
   font-weight: bold; }
+
+.highlight {
+  background-image: linear-gradient(to right, transparent 50%, #EAD8B7 50%);
+  background-origin: 0;
+  background-size: 0% 52%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%; }
 
 /*---------------------------------------------------------
 # HOME PAGE
@@ -775,7 +792,8 @@ button.arrow {
       color: black;
       padding: 10px; }
       .featured h3 a:hover {
-        color: #4D51A2; }
+        color: #4D51A2;
+        background-size: 0% 52%; }
   .featured .feature {
     display: flex;
     align-items: center; }
@@ -798,24 +816,41 @@ button.arrow {
   .services .all-services {
     display: flex;
     align-items: baseline;
-    justify-content: center; }
+    justify-content: space-evenly; }
     .services .all-services .service {
+      width: 25%;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .services .all-services .service .icon {
+      .services .all-services .service img {
         width: 40%; }
-        .services .all-services .service .icon img {
-          width: 100%; }
-      .services .all-services .service .text {
-        margin-top: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
-        background-color: white; }
-        .services .all-services .service .text h3 {
-          text-align: center; }
-        .services .all-services .service .text p {
-          text-align: justify; }
+      .services .all-services .service h3 {
+        text-align: center; }
+    .services .all-services .text {
+      display: none;
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: white; }
+      .services .all-services .text p {
+        text-align: justify; }
+  .services .all-services-mobile {
+    display: none; }
+  .services .highlight {
+    background-size: 200% 52%; }
+
+.services .all-services .service.one:hover .text {
+  display: block;
+  transition: width 2s ease 1s; }
+
+.services .all-services .service.two:hover .text {
+  display: block; }
+
+.services .all-services .service.three:hover .text {
+  display: block; }
+
+.services .all-services .service.four:hover .text {
+  display: block; }
 
 /*---------------------------------------------------------
 # CONTACT
@@ -828,6 +863,8 @@ button.arrow {
     height: 30px;
     padding-left: 10px;
     padding-right: 10px; }
+  .social-media a:hover {
+    background-size: 0% 50%; }
 
 /*---------------------------------------------------------
 # FOOTER
@@ -867,7 +904,11 @@ button.arrow {
     max-width: 150px; }
 
   .entry.top h5 {
-    margin-top: -275px; } }
+    margin-top: -275px; }
+
+  .services .service .text p {
+    font-size: 15px;
+    text-align: left; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   nav {
@@ -907,7 +948,30 @@ button.arrow {
 
   .arrow-right {
     font-size: 30px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+
+  .services .all-services {
+    display: none; }
+
+  .services .all-services-mobile {
+    display: flex;
+    flex-direction: column; }
+    .services .all-services-mobile .service {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 50px; }
+      .services .all-services-mobile .service .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .services .all-services-mobile .service .title h3 {
+          margin-top: 10px; }
+        .services .all-services-mobile .service .title img {
+          width: 50%; }
+      .services .all-services-mobile .service .text p {
+        background-color: white;
+        padding: 20px; } }
 @media only screen and (max-width: 900px) {
   .experience {
     height: 1800px; }
@@ -928,7 +992,17 @@ button.arrow {
 @media only screen and (max-width: 768px) {
   nav {
     width: 300px;
-    height: 100px; } }
+    height: 100px; }
+
+  .header {
+    padding-top: 100px; } }
+@media only screen and (max-width: 660px) {
+  .services .all-services-mobile .service {
+    flex-direction: column; }
+    .services .all-services-mobile .service .title {
+      width: 60%; }
+    .services .all-services-mobile .service .text {
+      width: 90%; } }
 @media only screen and (max-width: 600px) {
   .experience {
     height: 2000px; }
@@ -938,7 +1012,10 @@ button.arrow {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .experience {
-    height: 2100px; } }
+    height: 2100px; }
+
+  .header p {
+    font-size: 15px; } }
 @media only screen and (max-width: 440px) {
   .experience {
     height: 2400px; } }

@@ -10,8 +10,8 @@ $logo-yellow: #EAD8B7;
 $bg-gray: #E6E7E8;
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -309,23 +309,23 @@ body {
 ----------------------------------------------------------*/
 
 nav {
-	background-color: white;
+  background-color: white;
   width: 38%;
   height: 55px;
-	margin: 0 auto;
+  margin: 0 auto;
   font-family: $anonpro;
 /*  margin-bottom: 55px;*/
 
-	ul {
-		margin: 0;
+  ul {
+    margin: 0;
     text-align: center;
     padding: 8px 0px 0px 0px;
 
-	}
+  }
 
-	li {
-		display: inline-block;
-		padding: 10px 10px 10px 10px;
+  li {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
 
     a {
       text-decoration: none;
@@ -333,11 +333,17 @@ nav {
     }
 
     &:hover {
-      border-bottom: 3px solid $logo-purple ;
-      border-color: $logo-purple;
+      /*border-bottom: 3px solid $logo-purple ;*/
+      /*border-color: $logo-purple;*/
       text-decoration: none; 
+      color: $logo-purple;
+
+      .highlight {
+        color: $logo-purple;
+        background-size: 200% 50%;
+      }
     }
-	}
+  }
 }
 
 nav.main-menu {
@@ -372,9 +378,16 @@ p {
 a {
   color: $logo-purple;
   text-decoration: none;
+  background-image: linear-gradient(to right, transparent 50%, $logo-yellow 50%);
+  background-origin: 0;
+  background-size: 0% 52%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+
   &:hover {   
     color: $logo-blue;
     cursor: pointer;
+    background-size: 200% 52%;
   }
 }
 
@@ -415,6 +428,14 @@ button {
   font-weight: bold;
 }
 
+.highlight {
+  background-image: linear-gradient(to right, transparent 50%, $logo-yellow 50%);
+  background-origin: 0;
+  background-size: 0% 52%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+}
+
 
 
 /*---------------------------------------------------------
@@ -426,16 +447,16 @@ body {
 
 .header {
   padding-top: 50px;
-	text-align: center;
+  text-align: center;
   text-decoration: none;
   padding-bottom: 30px;
 
-	img {
-		width: 45%;
-		padding-top: 50px;
+  img {
+    width: 45%;
+    padding-top: 50px;
     padding-bottom: 30px;
-		margin: 0 auto;
-	}
+    margin: 0 auto;
+  }
 
   p {
     margin-top: 0px;
@@ -930,6 +951,7 @@ button.arrow {
 
       &:hover {
         color: $logo-purple;
+        background-size: 0% 52%;
       }
     }
   }
@@ -966,41 +988,61 @@ button.arrow {
 .services {
   background-color: $logo-blue;
 
+
   .all-services {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-evenly;
 
     .service {
+      width: 25%;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .icon {
+      img {
         width: 40%;
-
-        img {
-          width: 100%;
-        }
       }
 
-      .text {
-        margin-top: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
-        background-color: white;
+      h3 {
+        text-align: center;
+      }
+    }
 
+    .text {
+      display: none;
+      margin-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      background-color: white;
 
-        h3 {
-          text-align: center;
-        }
-
-        p {
-          text-align: justify;
-        }
+      p {
+        text-align: justify;
       }
     }
   }
+
+  .all-services-mobile {
+    display: none;
+  }
+
+  .highlight {
+    background-size: 200% 52%;
+  }
+}
+
+.services .all-services .service.one:hover .text {
+  display: block;
+  transition: width 2s ease 1s;
+}
+.services .all-services .service.two:hover .text {
+  display: block;
+}
+.services .all-services .service.three:hover .text {
+  display: block;
+}
+.services .all-services .service.four:hover .text {
+  display: block;
 }
 
 /*---------------------------------------------------------
@@ -1016,6 +1058,10 @@ button.arrow {
       height: 30px;
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    &:hover {
+      background-size: 0% 50%;
     }
   }
 }
@@ -1075,6 +1121,11 @@ button.arrow {
 
   .entry.top h5 {
     margin-top: -275px;
+  }
+
+  .services .service .text p {
+    font-size: 15px;
+    text-align: left;
   }
 }
 
@@ -1142,6 +1193,43 @@ button.arrow {
     padding-right: 15px;
   }
 
+  .services .all-services {
+    display: none;
+  }
+
+  .services .all-services-mobile {
+    display: flex;
+    flex-direction: column;
+
+    .service {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 50px;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          margin-top:10px;
+        }
+
+        img {
+          width: 50%;
+        }
+      }
+
+      .text {
+        p {
+          background-color: white;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width : 900px) {
@@ -1180,7 +1268,24 @@ button.arrow {
     width: 300px;
     height: 100px;
   }
+  .header {
+   padding-top: 100px;
+  }
 
+}
+
+@media only screen and (max-width : 660px) {
+  .services .all-services-mobile .service {
+    flex-direction: column;
+
+    .title {
+      width: 60%;
+    }
+
+    .text {
+      width: 90%;
+    }
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -1197,6 +1302,9 @@ button.arrow {
 @media only screen and (max-width : 480px) {
   .experience {
     height: 2100px;
+  }
+  .header p {
+    font-size: 15px;
   }
 }
 
