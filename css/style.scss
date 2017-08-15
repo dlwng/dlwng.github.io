@@ -551,7 +551,7 @@ button.arrow {
 
 .experience {
     background-color: $logo-yellow;
-    height: 600px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,7 +570,7 @@ button.arrow {
     }
 
     .desktop {
-      margin-top: 200px;
+      margin-top: 100px;
     }
 
     .mobile {
@@ -602,20 +602,12 @@ button.arrow {
     }
   }
 
-  .entry.top {
-    margin-top: -195px;
-  }
-
-  .entry.top h3 {
-    margin-top: 210px;
-  }
-
-  .entry.top h5 {
-    margin-top: -245px;
-  }
-
-  .entry.below h3 {
+  .entry h3 {
     margin-top: -70px;
+  }
+
+  .entry.lower h5 {
+    margin-top: 190px;
   }
 
   .entry.below h5 {
@@ -623,20 +615,7 @@ button.arrow {
   }
 
 
-  .timeline-content .entry:nth-child(even)::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 5px solid white;
-    background-color: $logo-yellow;
-    position: absolute;
-    left: 43%;
-    top: 177px;
-  }
-
-  .timeline-content .entry:nth-child(odd)::before {
+  .timeline-content .entry::before {
     content: '';
     display: block;
     width: 20px;
@@ -653,10 +632,10 @@ button.arrow {
     content:'';
     display:block;
     width: 5px;
-    height: 70px;
+    height: 140px;
     position:absolute;
     left: 43%;
-    top: 110px;
+    top: 10px;
     margin-left: 12.5px;
     background-color: white;
   }
@@ -710,7 +689,6 @@ button.arrow {
 
   .timeline-content .entry.two:hover #timeline-2 {
     display: block;
-    margin-top: 180px;
     left: -40px;
   }
 
@@ -720,7 +698,6 @@ button.arrow {
 
   .timeline-content .entry.four:hover #timeline-4 {
     display: block;
-    margin-top: 180px;
   }
 
   .timeline-content .entry.five:hover #timeline-5 {
@@ -729,7 +706,6 @@ button.arrow {
 
   .timeline-content .entry.six:hover #timeline-6 {
     display: block;
-    margin-top: 180px;
     left: -100px;
   }
 
@@ -1044,6 +1020,7 @@ button.arrow {
 .services .all-services .service.four:hover .text {
   display: block;
 }
+
 
 /*---------------------------------------------------------
 # CONTACT

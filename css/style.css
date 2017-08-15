@@ -488,7 +488,7 @@ button.arrow {
 ----------------------------------------------------------*/
 .experience {
   background-color: #EAD8B7;
-  height: 600px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -502,7 +502,7 @@ button.arrow {
     font-family: "Anonymous Pro", monospace;
     color: #4D51A2; }
   .experience .desktop {
-    margin-top: 200px; }
+    margin-top: 100px; }
   .experience .mobile {
     margin-top: 50px; }
   .experience .desktop, .experience .mobile {
@@ -524,34 +524,16 @@ button.arrow {
     min-width: 200px;
     max-width: 260px; }
 
-.entry.top {
-  margin-top: -195px; }
-
-.entry.top h3 {
-  margin-top: 210px; }
-
-.entry.top h5 {
-  margin-top: -245px; }
-
-.entry.below h3 {
+.entry h3 {
   margin-top: -70px; }
+
+.entry.lower h5 {
+  margin-top: 190px; }
 
 .entry.below h5 {
   margin-top: 120px; }
 
-.timeline-content .entry:nth-child(even)::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 5px solid white;
-  background-color: #EAD8B7;
-  position: absolute;
-  left: 43%;
-  top: 177px; }
-
-.timeline-content .entry:nth-child(odd)::before {
+.timeline-content .entry::before {
   content: '';
   display: block;
   width: 20px;
@@ -567,10 +549,10 @@ button.arrow {
   content: '';
   display: block;
   width: 5px;
-  height: 70px;
+  height: 140px;
   position: absolute;
   left: 43%;
-  top: 110px;
+  top: 10px;
   margin-left: 12.5px;
   background-color: white; }
 
@@ -618,22 +600,19 @@ button.arrow {
 
 .timeline-content .entry.two:hover #timeline-2 {
   display: block;
-  margin-top: 180px;
   left: -40px; }
 
 .timeline-content .entry.three:hover #timeline-3 {
   display: block; }
 
 .timeline-content .entry.four:hover #timeline-4 {
-  display: block;
-  margin-top: 180px; }
+  display: block; }
 
 .timeline-content .entry.five:hover #timeline-5 {
   display: block; }
 
 .timeline-content .entry.six:hover #timeline-6 {
   display: block;
-  margin-top: 180px;
   left: -100px; }
 
 .timeline-content .entry.seven:hover #timeline-7 {
