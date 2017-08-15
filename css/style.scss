@@ -1315,8 +1315,21 @@ button.arrow {
 }
 
 /* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 380px) {
+  .experience {
+    height: 2800px;
 
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+  .experience {
+    height: 3200px;
+  }
 }
 
 
