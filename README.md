@@ -19,9 +19,5 @@ Languages
 
 * [**Dorothy Wang**](https://github.com/dlwng)
 
-## Notes
-
-The video assets for this website were filmed and edited by Matthew and I for this project. This project was immensely helpful in our understanding of how to use a framework in web development and how to collaborate with git and Github.  
-
 
 
