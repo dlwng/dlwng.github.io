@@ -955,7 +955,13 @@ button.arrow {
   
 }
 
+.featured.featured-1 {
+  background-color: $logo-yellow;
+}
+
 .featured.featured-2 {
+  background-color: $logo-purple;
+
   .feature {
     .desktop-image {
       width: 100%;
@@ -963,11 +969,6 @@ button.arrow {
   }
 }
 
-.accent-bar {
-  width: 100%;
-  background-color: $logo-blue;
-  height: 10px;
-}
 
 
 /*---------------------------------------------------------
