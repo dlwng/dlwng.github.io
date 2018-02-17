@@ -761,6 +761,7 @@ button.arrow {
 # FEATURED
 ----------------------------------------------------------*/
 .featured {
+  background-color: #EAD8B7;
    }
   .featured h3 {
     text-align: center;
@@ -787,15 +788,14 @@ button.arrow {
   .featured .underline {
     text-decoration: underline; }
 
-.featured.featured-1 {
-  background-color: #EAD8B7;
-}
-
-.featured.featured-2 {
-  background-color: #eedfc4; }
-  .featured.featured-2 .feature .desktop-image {
+.featured.featured-2 .feature .desktop-image {
     width: 100%;
   }
+
+.accent-bar {
+  width: 100%;
+  background-color: #AEB5BD;
+  height: 10px;
 }
 
 
