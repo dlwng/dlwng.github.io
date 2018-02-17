@@ -802,6 +802,8 @@ button.arrow {
 /*---------------------------------------------------------
 # SERVICES
 ----------------------------------------------------------*/
+#services {
+  background-color: #AEB5BD; }
 .services {
   background-color: #AEB5BD; }
   .services .all-services {
