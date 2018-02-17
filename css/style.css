@@ -761,7 +761,7 @@ button.arrow {
 # FEATURED
 ----------------------------------------------------------*/
 .featured {
-  background-color: #EAD8B7; }
+   }
   .featured h3 {
     text-align: center;
     padding-bottom: 30px;
@@ -786,6 +786,15 @@ button.arrow {
       padding-right: 10px; }
   .featured .underline {
     text-decoration: underline; }
+
+.featured.featured-1 {
+  background-color: $logo-yellow;
+}
+
+.featured.featured-2 {
+  background-color: #eedfc4;
+}
+
 
 /*---------------------------------------------------------
 # SERVICES

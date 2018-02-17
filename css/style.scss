@@ -913,7 +913,6 @@ button.arrow {
 # FEATURED
 ----------------------------------------------------------*/
 .featured {
-  background-color: $logo-yellow;
 
   h3 {
     text-align: center;
@@ -954,6 +953,14 @@ button.arrow {
     text-decoration: underline;
   }
   
+}
+
+.featured.featured-1 {
+  background-color: $logo-yellow;
+}
+
+.featured.featured-2 {
+  background-color: #eedfc4;
 }
 
 
