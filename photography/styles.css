@@ -5,3 +5,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.title {
+  margin-bottom: 0px;
+}
