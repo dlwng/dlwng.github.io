@@ -969,6 +969,19 @@ button.arrow {
   }
 }
 
+.featured.sports-photo {
+  background-color: $logo-purple;
+  color: white;
+
+  .content {
+    padding-bottom: 0px;
+  }
+
+  .accent-photo-2 {
+    width: 100%
+  }
+}
+
 
 
 /*---------------------------------------------------------
